@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Slash.Unity.DataBind.Core.Data;
-using UnityEditorInternal;
+﻿using Slash.Unity.DataBind.Core.Data;
 using UnityEngine;
-
 
 public enum TestEnum : int
 {
@@ -32,12 +28,19 @@ public class TestData : Context
 	{		
 		Debug.Log("Constructor call");
 		TestEnum = TestEnum.Option3;
+		TestInt = 111;
 	}
 	
 	readonly Property<int> _testEnumProperty = new Property<int>(); 
 	public TestEnum TestEnum {
 		get { return (TestEnum)this._testEnumProperty.Value; }
 		set { this._testEnumProperty.Value = (int)value; }
+	}
+	
+	readonly Property<int> _testIntProperty = new Property<int>(); 
+	public int TestInt {
+	    get { return this._testIntProperty.Value; }
+	    set { this._testIntProperty.Value = value; }
 	}
 	
 //	
