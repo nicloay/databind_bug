@@ -10,8 +10,7 @@ public class OpenSecondScene : MonoBehaviour {
 	
 	void Start () {
 		GetComponent<Button>().onClick.AddListener(() =>
-		{
-			MainData.Instance.CurrentProp = MainData.Instance.Collection.ElementAt(0);
+		{			
 			SceneManager.LoadScene("SecondScene");
 		});
 	}

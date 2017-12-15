@@ -9,7 +9,6 @@ public class OpenMainScene : MonoBehaviour {
 	
 	void Start ()
 	{
-		MainData.Instance.CurrentProp.IntProp = 2;
 		GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene("MainScene"));
 	}
 

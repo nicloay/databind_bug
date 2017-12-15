@@ -6,10 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(ContextHolder))]
 public class ContextInitializer : MonoBehaviour {
 
-	
-	void Start ()
+	void Awake()
 	{
-		GetComponent<ContextHolder>().Context = MainData.Instance;
+		GetComponent<ContextHolder>().Context = TestData.Instance;
 	}
-	
 }
